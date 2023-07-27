@@ -23,9 +23,19 @@
     <div class="list-item">
         <input type="checkbox"> Take a nap
     </div>
+    <% if(locals.newListItem) { %>
+        <% for(var i = 0;i<newListItem.length;i++) { %>
+            <div class="list-item">
+            <input type="checkbox"> 
+            <%= newListItem[i] %>
+        </div>
+        <% }; %>
+            <% } %>
     <div class="list-item new">
-        <input type="text" placeholder="New Item"> 
-        <input type="button">
+        <form action="/" method="post">
+            <input type="text" name="newItem" placeholder="New Item" required> 
+            <button type="submit" name="button"> +
+        </form>
     </div>
     
 </div>
