@@ -1,11 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
-</head>
-<body>
+<%- include("partials/header.ejs") %>
+
+<h1>
+    <% let today = new Date();
+    today = today.toString(); 
+    today = today.slice(0,16);%>
+    <%= today %>
+</h1>
+
+<div class="list">
+    <div class="list-item">
+        <input type="checkbox"> Eat lunch
+    </div>
+    <div class="list-item">
+        <input type="checkbox"> Do the dishes
+    </div>
+    <div class="list-item">
+        <input type="checkbox"> Study
+    </div>
+    <div class="list-item">
+        <input type="checkbox"> Start project
+    </div>
+    <div class="list-item">
+        <input type="checkbox"> Take a nap
+    </div>
+    <div class="list-item new">
+        <input type="text" placeholder="New Item"> 
+        <input type="button">
+    </div>
     
-</body>
-</html>
+</div>
+
+
+<%- include("partials/footer.ejs") %>

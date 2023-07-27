@@ -1,11 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do Tomorrow</title>
-</head>
-<body>
+<%- include("partials/header.ejs") %>
+
+<h1>
+    <% let today = new Date();
+    let tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate()+1);
+    tomorrow = tomorrow.toString();
+    tomorrow = tomorrow.slice(0,16);
+    %>
+    <%= tomorrow %>
+</h1>
+
+<div class="list">
+    <div class="list-item">
+        <input type="checkbox"> Eat breakfast
+    </div>
+    <div class="list-item">
+        <input type="checkbox"> Clean the floor
+    </div>
+    <div class="list-item">
+        <input type="checkbox"> Study
+    </div>
+    <div class="list-item">
+        <input type="checkbox"> Finish project
+    </div>
+    <div class="list-item new">
+        <input type="text" placeholder="New Item"> 
+        <input type="button">
+    </div>
     
-</body>
-</html>
+</div>
+
+
+<%- include("partials/footer.ejs") %>
