@@ -12,28 +12,34 @@
 
 <div class="list">
     <div class="list-item">
-        <input type="checkbox"> Eat breakfast
+        <input type="checkbox"> 
+        <p>Eat breakfast</p>
     </div>
     <div class="list-item">
-        <input type="checkbox"> Clean the floor
+        <input type="checkbox"> 
+        <p>Clean the floor</p>
     </div>
     <div class="list-item">
-        <input type="checkbox"> Study
+        <input type="checkbox"> 
+        <p>Study</p>
     </div>
     <div class="list-item">
-        <input type="checkbox"> Finish project
+        <input type="checkbox"> 
+        <p>Finish project</p>
     </div>
     <% if(locals.newListItem) { %>
         <% for(var i = 0;i<newListItem.length;i++) { %>
             <div class="list-item">
             <input type="checkbox"> 
-            <%= newListItem[i] %>
+            <p>
+                <%= newListItem[i] %>
+            </p>
         </div>
         <% }; %>
             <% } %>
     <div class="list-item new">
         <form action="/tomorrow" method="post">
-            <input type="text" name="newItem" placeholder="New Item" required> 
+            <input type="text" name="newItem" placeholder="Type In New Item To Add" required> 
             <button type="submit" name="button"> + 
         </form>
     </div>

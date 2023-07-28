@@ -1,3 +1,6 @@
+<head>
+    <link rel="stylesheet" href="../public/styles.css">
+</head>
 <%- include("partials/header.ejs") %>
 
 <h1>
@@ -9,31 +12,38 @@
 
 <div class="list">
     <div class="list-item">
-        <input type="checkbox"> Eat lunch
+        <input type="checkbox"> 
+        <p>Eat lunch</p>
     </div>
     <div class="list-item">
-        <input type="checkbox"> Do the dishes
+        <input type="checkbox">
+        <p> Do the dishes</p>
     </div>
     <div class="list-item">
-        <input type="checkbox"> Study
+        <input type="checkbox"> 
+        <p>Study</p>
     </div>
     <div class="list-item">
-        <input type="checkbox"> Start project
+        <input type="checkbox"> 
+        <p>Start project</p>
     </div>
     <div class="list-item">
-        <input type="checkbox"> Take a nap
+        <input type="checkbox"> 
+        <p>Take a nap</p>
     </div>
     <% if(locals.newListItem) { %>
         <% for(var i = 0;i<newListItem.length;i++) { %>
             <div class="list-item">
             <input type="checkbox"> 
+            <p>
             <%= newListItem[i] %>
+            </p>
         </div>
         <% }; %>
             <% } %>
     <div class="list-item new">
         <form action="/" method="post">
-            <input type="text" name="newItem" placeholder="New Item" required> 
+            <input type="text" name="newItem" placeholder="Type In New Item To Add" required style="margin-bottom: 10px;"> 
             <button type="submit" name="button"> +
         </form>
     </div>
